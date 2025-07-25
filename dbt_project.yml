@@ -40,3 +40,16 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    RAW_STAGE:
+      +materialized: view
+      +schema: SATHWIK_SC
+    
+    PROD:
+        +materialized: view
+        +schema: SATHWIKPROD_SC
+    UAT_STAGE:
+        +materialized: table
+        +schema: SATHWIKUAT_SC
+vars:
+  start_date: '2024-01-01'
+  end_date: '2024-12-31'
